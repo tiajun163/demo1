@@ -69,8 +69,7 @@ def build_person1(first_name,last_name,age=''):
     return person
 mis=build_person1('jiml','hek','27')#传值
 print(mis)
-
-
+print('测试')
 
 
 
