@@ -221,3 +221,40 @@ user=bulid_prosile('alb','ein',
             field='python' )
 print(bulid_prosile)
 print(user)
+'''''练习'''
+# 8-12，打印出顾客需要的配料
+def name_deom(*namet):
+    print('需要的配料：')
+    for name in namet:
+        print(name.title())
+uname=name_deom('hh','ww','ff','36')
+
+#8-13 打印自己名字和描述
+def user_n(age,name,*userdemo):
+    print('年龄;'+str(age))
+    print("姓名;"+name)
+    for user in userdemo:
+        print("描述：",user)
+user_n(29,'arl','喜欢xiaodie')
+user_n(150,'ss','www','eer','wwrtg')
+# print(u)
+#8-14 描述汽车
+def mak_car(car_name,car_type,**car_user_info):
+    #创建一个空字典
+    mak_cars={}
+    mak_cars['carname']=car_name
+    mak_cars['cartype']=car_type
+    for key ,value in car_user_info.items():
+        mak_cars['key']=value
+    return mak_cars
+car=mak_car('subaru','outback',color='blue',sss=True)
+print(car)
+''''将函数存储到模块中'''
+def mak_car(car_name,car_type,**car_user_info):
+    #创建一个空字典
+    mak_cars={}
+    mak_cars['carname']=car_name
+    mak_cars['cartype']=car_type
+    for key ,value in car_user_info.items():
+        mak_cars['key']=value
+    return mak_cars
