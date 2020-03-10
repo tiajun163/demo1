@@ -4,5 +4,5 @@ class Restaurant():
         #初始化属性
         self.res_name=res_name
         self.cuis_name=cuis_type
-    def des_res( self ):
+    # def des_res( self ):
 
