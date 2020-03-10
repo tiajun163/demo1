@@ -126,7 +126,7 @@ print(list2)
 ''''修改上面的使用函数处理'''
 def list_print(list_1,list_2):#这个函数处理把一个列表元素提取到另一个列表去
     '''创建函数 传2个参数'''
-    while list_1 :
+    while list_1:
         list_del=list_1.pop()#每次删除列表元素最后一个值
         print('打印出列表元素;'+list_del)
         list_2.append(list_del)#每次列表都添加一个元素
@@ -136,6 +136,88 @@ def list_append(list_2):
         print(list_name.title())
 list_1=['xiaodie','wd','resid','hello','Alr','goobbook']
 list_2=[]
-list_print(list_1,list_2)#传实参
+list_print(list_1[:],list_2)#传实参,通过切片，创建副本列表，list_1不修改
 list_append(list_2)
 # print('函数',list_append(list_2='小蝶'))
+print(list_1)
+
+''''练习'''
+#8-9
+def show_magicians(mag_name):
+    for name in mag_name:
+        print(name.title()+"打印每个人的名字")
+list_name=['小西','xiaowu','小爱','小蝶','老田']
+mag_name=list_name
+show_magicians(mag_name)
+#8-10
+'''修改8-9练习'''
+def show_magicians(mag_name,list_testname):
+    # for name in mag_name:
+    #     print(name.title()+"打印每个人的名字")
+    while mag_name:
+        name=mag_name.pop()
+        list_testname.append(name)
+def make_name(list_testname):
+    for name in list_testname:
+        print(name.title()+'新列表的元素')
+        print(list_testname)
+list_name=['小西','xiaowu','小爱','小蝶','老田']
+list_testname=[]
+mag_name=list_name
+show_magicians(mag_name,list_testname)
+make_name(list_testname)
+#练习8-11
+'''修改8-10，不修改列表 创建列表副本'''
+def show_magicians(mag_name,list_testname):
+    # for name in mag_name:
+    #     print(name.title()+"打印每个人的名字")
+    while mag_name:
+        name=mag_name.pop()
+        list_testname.append(name)
+def make_name(list_testname):
+    for name in list_testname:
+        print(name.title()+'新列表的元素')
+        print(list_testname)
+list_name=['小西','xiaowu','小爱','小蝶','老田']
+list_testname=[]
+mag_name=list_name
+show_magicians(mag_name[:],list_testname)
+make_name(list_testname)
+print(list_name)
+#传递任意数量的实参
+def make_pizza(*toppings):
+    ''''打印顾客点的所有配料'''
+    print('需要的配料：',toppings)
+make_pizza('peppepep')
+make_pizza('111','222','333','444','','kks')
+#循环遍历 打印出
+
+def make_pizza(*toppings):
+    ''''打印顾客点的所有配料'''
+    print('需要的配料：')
+    for name in toppings:
+        print(name)
+        # print(toppings)
+make_pizza('peppepep')
+make_pizza('111','222','333','444','','kks')
+#结合使用位置实参和任意位置实参
+def make_piz(size,*toppings):
+    print("大小："+str(size))
+    for name in toppings:
+        print("配料名字："+name)
+make_piz(26,'honse')
+make_piz(111,'222','333','444','','kks')
+#使用任意数量的关键字实参
+def bulid_prosile(first,last,**user_info):
+    '''创建一个空字典，包含用户的一切'''
+    procfile={}
+    procfile['first_name']=first#指定键值
+    procfile['last_name']=last
+    for key,value in user_info.items():#遍历user_info空字典
+        procfile['key']=value#把字典user_info 键值对加入到procfile字典中
+    return procfile#返回字典
+user=bulid_prosile('alb','ein',
+              location='princeton',
+            field='python' )
+print(bulid_prosile)
+print(user)
