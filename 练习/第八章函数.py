@@ -235,10 +235,11 @@ def user_n(age,name,*userdemo):
     print("姓名;"+name)
     for user in userdemo:
         print("描述：",user)
+    # return  user_n
 user_n(29,'arl','喜欢xiaodie')
 user_n(150,'ss','www','eer','wwrtg')
-# print(u)
-#8-14 描述汽车
+print(u)
+##8-14 描述汽车
 def mak_car(car_name,car_type,**car_user_info):
     #创建一个空字典
     mak_cars={}
