@@ -26,7 +26,7 @@ class Car():
         print('里程数：'+str(self.read_odmometer))
 my_user=Car('subaru', 'outback', '22013','GSG')
 print(my_user.Car_name())
-my_user.get_des_name(700)
+my_user.get_des_name(9000)
 my_user.read_o()
 my_user.increment_odometer(8000)
 my_user.read_o()
