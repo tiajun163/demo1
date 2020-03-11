@@ -1,19 +1,19 @@
-# ''''练习9-1'''
-# class Restaurant():
-#     def __init__(self,res_name,cuis_type):
-#         #初始化属性
-#         self.res_name=res_name
-#         self.cuis_name=cuis_type
-#     def des_res( self ):
-#      print('des_res方法：调用'+self.res_name)
-#     def open_res( self ):
-#         print('open_res方法调用：'+self.cuis_name)
-#
-# res=Restaurant('长沙','火车站')
-# print(res.cuis_name.title())
-# # print(res.des_res())
-# res.des_res()
-# ''''9.2.1'''
+''''练习9-1'''
+class Restaurant():
+    def __init__(self,res_name,cuis_type):
+        #初始化属性
+        self.res_name=res_name
+        self.cuis_name=cuis_type
+    def des_res( self ):
+     print('des_res方法：调用'+self.res_name)
+    def open_res( self ):
+        print('open_res方法调用：'+self.cuis_name)
+
+res=Restaurant('长沙','火车站')
+print(res.cuis_name.title())
+# print(res.des_res())
+res.des_res()
+''''9.2.1'''
 class Car():
     def __init__(self,make,model,year):
         #初始化属性
