@@ -17,7 +17,6 @@ class Restauarant():
     def increment_number_served(self,serveds):
         self.number_served +=serveds
 rem_user=Restauarant('龙的传人','中餐')
-rem_user.set_number_served(30)
-rem_user.increment_number_served(9000)
-print(rem_user.des_res())
-
+rem_user.set_number_served(30)#就餐人数
+rem_user.increment_number_served(9000)#添加就餐人数
+print(rem_user.des_res())#打印出
