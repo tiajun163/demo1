@@ -25,11 +25,15 @@ class Car():
         #返回描述的信息
         long_name=self.year+':'+self.make+'!'+self.module+'....'
         return long_name
-    def read_od( self ):
+    def read_od( self ,ode_red):
+        self.ode_red=ode_red
+        # if ode_red>=self.ode_red:#加入判断条件，禁止回调
+        #     self.ode_red=ode_red
+        # else:
         print('里程数：'+str(self.ode_red))
 my_name=Car('audi','a5','2019')
 print(my_name.get_des())
-my_name.ode_red=8888#修改属性值
-my_name.read_od()
+# my_name.ode_red=8888#修改属性值
+my_name.read_od(100001)#直接通过方法修改属性
 
 
