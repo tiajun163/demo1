@@ -1,4 +1,4 @@
-class Car():
+class Car(object):
     #创建初始化属性方法
         def __init__(self,make ,model,year):
             self.make=make
@@ -24,16 +24,17 @@ class Car():
             print("汽车有油箱")
 
 class ElectricCar(Car):#继承Car类
-    def __init__(self,make,model,year):
+      def __init__(self,make,model,year):
         #初始化父类的属性
-        super().__init__(make,model,year)
-        self.battery_size=70#创建子类的属性并初始化 电容量为70
-    def describe_battery( self ):
-        print('打印电瓶车的电容量：'+str(self.battery_size))
+         super().__init__(make,model,year)
+         self.battery_size=70#创建子类的属性并初始化 电容量为70
+      def describe_battery( self ):
+         print('打印电瓶车的电容量：'+str(self.battery_size))
 
 ''''给子类定义属性和方法'''#''''重写父类方法'''
-def fill_gas_tank( ):
- print("电动车没油箱")
+      # def fill_gas_tank():
+      #     super().__init__(Car)
+      #   print("电动车没油箱")
 
 my_tesla=ElectricCar('tesla','model s','2020')#创建实例
 print(my_tesla.get_descriptive_name())#打印
