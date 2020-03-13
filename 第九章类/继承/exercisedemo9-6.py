@@ -31,14 +31,16 @@ class IceCreamStand(Restaurant):
        super().__init__(restaurant,cuisine_type)
         #创建一个存储冰淇淋口味的方法
     def Taste( self,flavors ):
-        pass
+        self.flavors=flavors
+       
 #创建调用实例
 restaurnt_y=Restaurant('爱蝶冰淇淋服务站','饮料冰淇淋专卖')
 res_y=IceCreamStand('dweq','ewws')
 print(res_y.describe_restanurant())
 print(restaurnt_y.describe_restanurant())
-
-restaurnt_y.resatrurant=80
+res_y.Taste='8009'
+print(res_y.Taste)
+# restaurnt_y.resatrurant(8000)
 restaurnt_y.restaurant_t()
 restaurnt_y.open_restaurant()
 restaurnt_y.restaurant_t()
