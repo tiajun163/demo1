@@ -22,3 +22,26 @@ class Cars():
             #将里程表的读数增加到指定的量
     def increment_odometer( self,miles ):
         self.odometer_reading +=miles
+   #创建一个电动汽车的类
+class Battery():
+   def __init__(self,battery_size=85):
+       #初始化电动车属性
+    self.battery_size=battery_size#
+   def describe_battery( self ):
+       #调用描述电瓶车容量的方法
+       print('电瓶车的容量：'+str(self.battery_size)+'w')
+   def get_range( self ):
+       if self.battery_size==70:
+           range=240
+       elif self.battery_size==85:
+           range=350
+       message="电瓶车大概可以开："+str(range)+'公里'
+       message+='火力全开'
+       print(message)
+
+class ElectricCar(Cars):
+    # 继承父类
+    def __init__(self,make,model,year):
+        #初始化父类属性
+        super().__init__(make,model,year)
+        self.battery = Battery()
