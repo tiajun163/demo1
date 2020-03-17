@@ -32,8 +32,10 @@ print(res.describe_restaurant())
 res.open_restaurat()
 #创建第二个实例
 ueste=Restaurant('深夜食堂','综合饭馆')
+ueste.describe_restaurant()
+ueste.number_serverd=300
 print(ueste.describe_restaurant())
-ueste.set_number_served(50000)
+ueste.set_number_served(100)
 ueste.open_restaurat()
-ueste.increment_number(5000)
+ueste.increment_number(1001)
 ueste.open_restaurat()
