@@ -39,3 +39,18 @@ ueste.set_number_served(100)
 ueste.open_restaurat()
 ueste.increment_number(1001)
 ueste.open_restaurat()
+#继承Restaurant类
+class IceCeamstand(Restaurant):
+    def __init__(self,restaurant_name ,restaurant_type='湘菜'):
+        super().__init__(restaurant_name,restaurant_type)#初始化父类属性
+        self.flavors=[]#初始化属性创建空列表
+   #该方法调用的 是客人喜欢的口味
+    def ice_res( self ):
+      
+        for flavors in self.flavors:
+            print ("客人喜欢的口味："+flavors)
+#创建实例
+rs=IceCeamstand('小炒肉')
+rs.flavors=['特辣','微辣','中辣']
+print(rs.describe_restaurant())
+rs.ice_res()
