@@ -9,7 +9,7 @@
 # else:
 #     sum=x+y
 #     print('x+y的和为：'+str(sum))
-#使用while循环
+#使用while循环 10-7
 print('退出输入q')
 while True:
     try:
