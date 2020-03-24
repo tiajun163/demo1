@@ -1,0 +1,4 @@
+This PEP proposes to introduce a syntax to declare the encoding of a Python source file. The encoding information is then used by the Python parser to interpret the file using the given encoding. Most notably this enhances the interpretation of Unicode literals in the source code and makes it possible to write Unicode literals using e.g. UTF-8 directly in an Unicode aware editor
+I propose to make the Python source code encoding both visible and changeable on a per-source file basis by using a special comment at the top of the file to declare the encoding.
+
+To make Python aware of this encoding declaration a number of concept changes are necessary with respect to the handling of Python source code data
