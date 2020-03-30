@@ -1,4 +1,5 @@
 from 第十一章测试代码.练习.ciy_test import ciy_name
+print('退出输入q')
 while True:
     city=input('输入你城市名退出输入q!\n')
     if city=='q':
