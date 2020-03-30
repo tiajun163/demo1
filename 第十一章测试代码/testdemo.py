@@ -1,4 +1,3 @@
-import  unittest
 from 第十一章测试代码.test import get_name
 print('退出请输入q')
 while True:
