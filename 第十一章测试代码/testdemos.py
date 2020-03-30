@@ -7,6 +7,8 @@ class MyTestCase (unittest.TestCase):
         
         self.assertEqual (full_naeml,'Ssewe')#断言
 
-
+    def test_get_name( self ):
+        function_name=get_name('arl','xiaodie','admin')
+        self.assertAlmostEqual(function_name,'Arlxiaodieadmin')
 if __name__ == '__main__':
     unittest.main ()
